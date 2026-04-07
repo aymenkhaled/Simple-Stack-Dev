@@ -16,6 +16,18 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### MoodDrop — Mobile App (`artifacts/mobile`)
+- **Type**: Expo (React Native)
+- **Framework**: Expo Router, React Native, TypeScript
+- **State**: AsyncStorage for local persistence (no backend needed)
+- **Features**:
+  - Drop screen: Pick mood level 1-5 (Rough/Low/Okay/Good/Great) + optional note
+  - History screen: Timeline grouped by date with long-press to delete
+  - Insights screen: 7-day bar chart + stats (streak, best day, average)
+- **Dependencies**: @react-native-async-storage/async-storage, expo-haptics, react-native-reanimated
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
